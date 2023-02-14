@@ -1,6 +1,6 @@
 public class Printable {
     int level;
-    final String TAB_CHARACTER = "  ";
+    final String TAB_CHARACTER = " ";
 
     public String tabs() {
         String temp = "";

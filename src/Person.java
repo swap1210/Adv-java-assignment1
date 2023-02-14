@@ -24,4 +24,11 @@ public abstract class Person extends Printable {
         this.phone = phone;
     }
 
+    @Override
+    public String toString() {
+        return title + " " + givenName + " " + familyName + "\n" + this.tabs() + "Date of Birth: "
+                + this.getBirthDate();
+    }
+
+    public abstract String getBirthDate();
 }

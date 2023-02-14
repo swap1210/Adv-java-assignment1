@@ -1,3 +1,5 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.LinkedList;
@@ -23,6 +25,7 @@ public class Patient extends Person {
         this.allergies = allergies;
         this.specialReqs = specialReqs;
         this.assignedOperationsStaff = new LinkedList<>();
+        this.level = 3;
     }
 
     public void addOperationsStaff(OperationsStaff os) {
@@ -31,9 +34,14 @@ public class Patient extends Person {
 
     @Override
     public String toString() {
-        return "Patient [id=" + id + ", age=" + age + ", accepted=" + accepted + ", prescriptions="
-                + Arrays.toString(prescriptions) + ", allergies=" + Arrays.toString(allergies) + ", specialReqs="
-                + Arrays.toString(specialReqs) + "]";
+        return this.getClass().getSimpleName() + ": " + super.toString();
+    }
+
+    @Override
+    public String getBirthDate() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        String strDate = dateFormat.format(birthDate);
+        return strDate;
     }
 
 }

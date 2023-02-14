@@ -7,13 +7,7 @@ public class Nurse extends OperationsStaff {
             String[] languages, String designation) {
         super(title, givenName, middleName, familyName, name, birthDate, gender, homeAddress, phone, joined, education,
                 certification, languages, designation);
-        this.level = 3;
+        this.level = 4;
     }
 
-    @Override
-    public String toString() {
-        String temp = "";
-        temp += this.tabs() + this.getClass().getName() + ": " + this.title + " " + this.name;
-        return temp;
-    }
 }

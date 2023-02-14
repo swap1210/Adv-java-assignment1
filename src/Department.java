@@ -16,8 +16,7 @@ public class Department extends Printable {
     @Override
     public String toString() {
         String temp = "";
-        temp += this.tabs() + this.name;
-        temp += "\n" + this.tabs() + this.tabs() + "Staff:";
+        temp += this.tabs() + this.name + " Staff:";
         for (Staff staf : staff) {
             temp += "\n" + this.tabs() + staf.toString();
         }

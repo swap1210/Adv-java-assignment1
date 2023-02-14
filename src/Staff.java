@@ -1,3 +1,5 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Staff extends Person {
@@ -16,4 +18,15 @@ public class Staff extends Person {
         this.languages = languages;
     }
 
+    @Override
+    public String getBirthDate() {
+        DateFormat dateFormat = new SimpleDateFormat("MMM-dd");
+        String strDate = dateFormat.format(birthDate);
+        return strDate;
+    }
+
+    @Override
+    public String toString() {
+        return this.tabs() + this.getClass().getName() + ": " + super.toString();
+    }
 }

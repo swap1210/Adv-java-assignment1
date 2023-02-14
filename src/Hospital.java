@@ -51,14 +51,14 @@ public class Hospital extends Printable {
         temp += "\nHospital:\n";
         temp += this.tabs() + this.name + " Phone: " + this.phone;
         temp += "\n" + this.tabs() + this.address;
-        temp += "\n" + this.tabs() + "Departments:";
+        temp += "\n" + this.tabs() + this.tabs() + "Departments:";
         for (Department dep : departments) {
-            temp += "\n" + this.tabs() + dep.toString();
+            temp += "\n" + dep.tabs() + dep.toString();
         }
 
-        temp += "\n" + this.tabs() + "Patientss:";
+        temp += "\n" + this.tabs() + this.tabs() + "Admitted:";
         for (Person pat : patients) {
-            temp += "\n" + this.tabs() + pat.toString();
+            temp += "\n" + pat.tabs() + pat.toString();
         }
         return temp;
     }
